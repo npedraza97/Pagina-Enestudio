@@ -1,0 +1,155 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    overflow: hidden; /* Oculta el scroll */
+}
+
+.background {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: backgroundSlide 30s infinite linear; /* Movimiento del fondo */
+}
+
+@keyframes backgroundSlide {
+    0% { background-position: center; }
+    50% { background-position: center top; }
+    100% { background-position: center; }
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.75); /* Fondo semi-transparente */
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out; /* Animación de desvanecimiento */
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+header h1 {
+    font-size: 3em;
+    color: #ffcc00; /* Letras destacadas */
+    animation: slideDown 1.5s ease-in-out; /* Animación de deslizamiento */
+}
+
+@keyframes slideDown {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    color: #ffffff; /* Letras destacadas */
+    animation: slideUp 2s ease-in-out; /* Animación de deslizamiento */
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.main {
+    animation: slideUp 2s ease-in-out;
+}
+
+button {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 1em;
+    animation: bounceIn 2s ease-in-out; /* Animación de rebote */
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05); /* Animación para el botón */
+}
+
+#form-section {
+    display: none; /* Oculto por defecto */
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin: 40px auto;
+    width: 80%;
+    max-width: 600px;
+    color: #fff;
+    text-align: left;
+    animation: fadeIn 2s ease-in-out; /* Animación de desvanecimiento */
+}
+
+.form-container h2 {
+    margin-bottom: 1em;
+    color: #ffcc00; /* Letras destacadas */
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 1em;
+    width: 100%;
+    text-align: left;
+}
+
+.form-group label {
+    color: #fff; /* Texto en blanco */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+    background-color: #333; /* Fondo de input negro */
+    color: #fff; /* Texto de input blanco */
+}
+
+button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Animación para el botón */
+}
